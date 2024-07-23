@@ -71,7 +71,7 @@ Let's say that you want to package a Helm chart that deploys a simple web applic
 - make the custom image accessible to your cluster (there are configuration keys set values)
 
 _custom-values.yaml:_
-``` custom-values.yaml
+```yaml
 configMap: |
   kube-props.kubes[0].name=example
   
@@ -79,7 +79,7 @@ extraSecretFile: ""
 ```
 
 _secret-values.yaml:_
-```secret-values.yaml
+```yaml
 data: "some secret you want to protect"
 ```
 
@@ -93,7 +93,7 @@ data: "some secret you want to protect"
     1. make note of the `nameOverride` as this will be the name of your chart and deployment later
     2. in case of age encryption set this key `encrypted_secret.age: ""`
 3. Set a secret containing the age private key as its contents in the deployment namespace(found in `age-key.txt`)
-```
+```yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -120,7 +120,7 @@ there you will find a few files:
     - `secrets-values.yaml` that you encrypt using SOPS.
 
 _Chart.yaml:_
-```Chart.yaml
+```yaml
 apiVersion: v2  
 name: captain-olm  
 description: An umbrella chart for managing custom values for dependent charts  
@@ -132,7 +132,7 @@ dependencies:
 ```
 
 _values.yaml:_
-```values.yaml
+```yaml
 captain-olm:  
   nameOverride: "webapp"
 ...
