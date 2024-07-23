@@ -37,7 +37,7 @@ pygmentsUseClasses  = true
 
 rssLimit = 10
 
-copyright = "CHANGE ME"
+copyright = ""
 enableEmoji = true
 
 #[services]
@@ -116,7 +116,7 @@ descriptionInPosts= true
 
 [[params.socialLinks]]
 name = "mastodon"
-url = ""
+url = "https://mastodon.social/@mrupnikm"
 
 [[params.socialLinks]]
 name = "github"
