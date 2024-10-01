@@ -4,7 +4,7 @@
 # To see what each config does, refer to https://1bl4z3r.github.io/hermit-V2/en/posts/explaining-configs/
 # Open Issue or Pull Request at https://github.com/1bl4z3r/hermit-V2
 
-baseURL = "mrupnik.github.io"
+baseURL = "blog.olmden.si"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 #theme = "hermit-v2"
