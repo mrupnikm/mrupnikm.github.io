@@ -1,7 +1,7 @@
 ---
 author: "Matic Rupnik"
 authorLink: matic-rupnik
-date: 2024-03-25
+date: 2025-03-25
 title: Generic Postgres backup Helm chart for S3 buckets
 tags: [
   "Helm",
