@@ -1,7 +1,7 @@
 ---
 author: "Matic Rupnik"
 authorLink: matic-rupnik
-date: 2024-25-03
+date: 2024-03-25
 title: Generic Postgres backup Helm chart for S3 buckets
 tags: [
   "Helm",
@@ -35,8 +35,7 @@ Breaking it down the chart has the following structure:
     ├── backup.sh
     └── dockerfile
 ```
-```
-```
+
 1. Tusky Job has the contents of a dockerfile and the backup script used in the job that will be triggering based on time:
 
 ```bash
@@ -64,10 +63,9 @@ echo "Backup completed successfully and uploaded to MinIO"
 As you can see the task itself is quite short and simple. All it needs are the `minio-client` binary and access to the `pg_dump` binary to make the backup happen. For now I have passed the needed credentials as environment variables.
 
 2. Values define the behavior of our chart so they look like this for now. I usually use sops encryption if you intend to store them in a repository:
-
-```ỳaml
+```yaml
 image:
-  repository: mrupnikm/olm-tusky-job 
+  repository: mrupnikm/olm-tusky-job
   tag: latest
   pullPolicy: Always
 
@@ -103,6 +101,7 @@ activeDeadlineSeconds: 600
 postgresql:
   database:
   user:
+
 ```
 Breaking it down it is quote simple here as well. You need to set an image for the job and the cron schedule. Pass in the existing postgresql database password secret name, database and username and the MinIO credentials. Lastly do not forget about the deployment name that needs to be stopped when the backup happens.
 
@@ -270,5 +269,5 @@ With that out the way. I hope this gives you some inspiration on your own backup
 
 - [Github Olm-Tusky](https://github.com/mrupnikm/olm-tusky)
 - [Job Docker image](https://hub.docker.com/repository/docker/mrupnikm/olm-tusky-job)
-- [Olm Tusky Helm chart](...)
+- [Olm Tusky Helm chart](../charts/olm-tusky.md)
 
