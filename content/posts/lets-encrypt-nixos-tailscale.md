@@ -64,7 +64,6 @@ To tie everything together, I utilized the ACME and Nginx services in my Nix con
 Here’s an example of the necessary configuration:
 
 ```sh
-Copy code
 CLOUDFLARE_EMAIL="..."
 CLOUDFLARE_API_KEY="..."
 ```
