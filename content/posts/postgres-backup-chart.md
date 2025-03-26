@@ -269,5 +269,5 @@ With that out the way. I hope this gives you some inspiration on your own backup
 
 - [Github Olm-Tusky](https://github.com/mrupnikm/olm-tusky)
 - [Job Docker image](https://hub.docker.com/repository/docker/mrupnikm/olm-tusky-job)
-- [Olm Tusky Helm chart](../charts/olm-tusky.md)
+- [Olm Tusky Helm chart](../charts/olm-tusky/)
 
